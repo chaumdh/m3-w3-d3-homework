@@ -1,0 +1,88 @@
+@use "colors";
+@use "nav";
+
+/* Variables */
+$font1: Arial, Helvetica, Sans-Serif;
+$font2: 'Sacramento', cursive;
+
+// global
+* {
+    background-color: colors.$global-background-color;
+    color: colors.$black-text;
+    font-size: 1rem;
+    font-family: $font1;
+}
+
+@mixin centered-text($max-width: 200px) {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+/* Nest Main */
+main {
+    width: 98%;
+    min-height:535px;
+    background-color: colors.$main-background-color;
+    margin: 1% auto;
+    display: flex; // components display side-by-side
+    
+    section#intro-text {
+        background-color: colors.$intro-text-background-color;
+        width: 30%;
+        // height: auto; (default)
+        align-content: center; // center all components vertically as a group
+        margin: 2% 0 2% 2%; // top right bottom left
+
+        span {
+            @include centered-text();
+            background-color: inherit;
+            font-family: $font2;
+            font-size: 2.2rem;
+            margin: 6% auto;
+        }
+
+        h3 {
+            @include centered-text();
+            background-color: inherit;
+            margin: 0 auto;
+            font-size: 2rem;
+        }
+
+        p {
+            @include centered-text();
+            background-color: inherit;
+            margin: 6% auto;
+            width: 98%;
+        }
+
+        .submit-buttton {
+            margin: 8% auto;
+            color: colors.$white-text;
+            display: block; // center horizontally by making element take up the width
+            border: none;
+            padding: 3% 2%;
+        }
+    }
+    
+    section#intro-image {
+        width: 65%; // height: auto; (default)
+        margin: 2% 2% 2% 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+}
+
+footer {
+    display: block;
+    padding: 0 0 0 5%;
+    margin: 20px auto;
+}
+
+// Mixin or Extend for button

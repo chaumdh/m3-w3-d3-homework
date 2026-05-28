@@ -1,0 +1,16 @@
+/* Nest Nav */
+nav ul {
+  padding: 0 0 0 5%;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+/*# sourceMappingURL=nav.css.map */

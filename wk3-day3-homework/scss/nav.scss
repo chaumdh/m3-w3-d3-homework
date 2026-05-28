@@ -1,0 +1,20 @@
+@use "colors";
+
+/* Nest Nav */
+nav {
+    ul {
+        padding: 0 0 0 5%;
+        list-style: none;
+    }
+
+    li {
+        display: inline-block;
+        color: colors.$white-text;
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        color: colors.$white-text;
+    }
+}
